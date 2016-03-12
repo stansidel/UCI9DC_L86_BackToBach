@@ -12,6 +12,8 @@
 		F68642F21C946C2100FF9EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68642F01C946C2100FF9EA2 /* Main.storyboard */; };
 		F68642F41C946C2100FF9EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68642F31C946C2100FF9EA2 /* Assets.xcassets */; };
 		F68642F71C946C2100FF9EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68642F51C946C2100FF9EA2 /* LaunchScreen.storyboard */; };
+		F68642FF1C94735900FF9EA2 /* secret_garden.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F68642FE1C94735900FF9EA2 /* secret_garden.mp3 */; };
+		F68643011C94737A00FF9EA2 /* piano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F68643001C94737A00FF9EA2 /* piano.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F68642F31C946C2100FF9EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F68642F61C946C2100FF9EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F68642F81C946C2100FF9EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68642FE1C94735900FF9EA2 /* secret_garden.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = secret_garden.mp3; sourceTree = "<group>"; };
+		F68643001C94737A00FF9EA2 /* piano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = piano.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		F68642EB1C946C2100FF9EA2 /* UCI9DC L86 Back to Bach */ = {
 			isa = PBXGroup;
 			children = (
+				F68642FE1C94735900FF9EA2 /* secret_garden.mp3 */,
+				F68643001C94737A00FF9EA2 /* piano.jpg */,
 				F68642EC1C946C2100FF9EA2 /* AppDelegate.swift */,
 				F68642EE1C946C2100FF9EA2 /* ViewController.swift */,
 				F68642F01C946C2100FF9EA2 /* Main.storyboard */,
@@ -124,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68642F71C946C2100FF9EA2 /* LaunchScreen.storyboard in Resources */,
+				F68642FF1C94735900FF9EA2 /* secret_garden.mp3 in Resources */,
+				F68643011C94737A00FF9EA2 /* piano.jpg in Resources */,
 				F68642F41C946C2100FF9EA2 /* Assets.xcassets in Resources */,
 				F68642F21C946C2100FF9EA2 /* Main.storyboard in Resources */,
 			);

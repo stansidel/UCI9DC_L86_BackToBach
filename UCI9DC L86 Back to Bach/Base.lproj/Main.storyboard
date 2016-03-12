@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UCI9DC_L86_Back_to_Bach" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="p2R-rL-0mh">
+                                <rect key="frame" x="18" y="474" width="564" height="31"/>
+                                <connections>
+                                    <action selector="playbackMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="prA-DP-xSo"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mS3-w7-5Dn">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <connections>
+                                    <action selector="changeVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="2MU-GW-DXi"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="thd-jW-flQ">
+                                <rect key="frame" x="218" y="512" width="164" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIn-CM-HWo">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pausePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hn8-Ez-gbj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO7-dI-dsy">
+                                        <rect key="frame" x="72" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Js-09-nv7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-Wf-gY3">
+                                        <rect key="frame" x="132" y="0.0" width="32" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lou-bx-u31"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="piano.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ooW-LX-UEH">
+                                <rect key="frame" x="20" y="66" width="560" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Secret Garden Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlk-Mg-7Dd">
+                                <rect key="frame" x="164" y="28" width="273" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p2R-rL-0mh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4qn-7T-x01"/>
+                            <constraint firstItem="mS3-w7-5Dn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K4h-I0-0ye"/>
+                            <constraint firstItem="ooW-LX-UEH" firstAttribute="trailing" secondItem="p2R-rL-0mh" secondAttribute="trailing" id="TkO-vc-4XI"/>
+                            <constraint firstItem="nlk-Mg-7Dd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Viz-0v-96s"/>
+                            <constraint firstItem="p2R-rL-0mh" firstAttribute="top" secondItem="ooW-LX-UEH" secondAttribute="bottom" constant="8" symbolic="YES" id="WRt-mk-YRT"/>
+                            <constraint firstItem="mS3-w7-5Dn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WSr-Cc-7Dn"/>
+                            <constraint firstItem="ooW-LX-UEH" firstAttribute="top" secondItem="nlk-Mg-7Dd" secondAttribute="bottom" constant="8" symbolic="YES" id="Wzz-kj-xsN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mS3-w7-5Dn" secondAttribute="bottom" constant="20" id="Yeg-YP-fOT"/>
+                            <constraint firstItem="p2R-rL-0mh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fsG-Oq-1eS"/>
+                            <constraint firstItem="nlk-Mg-7Dd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gKA-2m-fKF"/>
+                            <constraint firstItem="thd-jW-flQ" firstAttribute="centerX" secondItem="p2R-rL-0mh" secondAttribute="centerX" id="iNl-AN-RQV"/>
+                            <constraint firstItem="ooW-LX-UEH" firstAttribute="leading" secondItem="p2R-rL-0mh" secondAttribute="leading" id="knN-ba-7dO"/>
+                            <constraint firstItem="mS3-w7-5Dn" firstAttribute="top" secondItem="thd-jW-flQ" secondAttribute="bottom" constant="8" symbolic="YES" id="qIV-o7-K3Y"/>
+                            <constraint firstItem="thd-jW-flQ" firstAttribute="top" secondItem="p2R-rL-0mh" secondAttribute="bottom" constant="8" symbolic="YES" id="qXf-0a-cwm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playbackSlider" destination="p2R-rL-0mh" id="Kxb-Fd-dHN"/>
+                        <outlet property="volumeSlider" destination="mS3-w7-5Dn" id="dsk-tz-S4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="418"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="piano.jpg" width="1600" height="1200"/>
+    </resources>
 </document>
